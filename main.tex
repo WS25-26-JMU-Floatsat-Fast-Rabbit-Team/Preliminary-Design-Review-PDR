@@ -171,6 +171,24 @@ All structural components are optimized for common FDM 3D-printing processes, av
 %-----------------------------------------
 \subsection{Electrical Design}
 %-----------------------------------------
+The electrical system consists of two microcontrollers, a power distribution board, an inertial measurement unit (IMU) and three motors with their drivers.
+The system will be powered by an lipo battery.
+The battery voltage can be monitored with an external Lipo checker.
+The power distribution board will provide connections to the battery voltage as well as regulated $5V$ and $3.3V$.
+The STM32F401, one of the microcontrollers, will be the main control unit.
+It will read the sensor values, calculate the control loop output and control the Motor phases accordingly.
+The ESP32-C6 microcontroller will be used to establish communication between the groundstation and the FloatSat.
+It will provide a wireless WiFi-Link and communicate with the main control unit over SPI.
+The motor drivers basically provide a half bridge for each BLDC motor phase.
+The half bridge allows to drive the motor phase HIGH or LOW, while providing sufficient current flow.
+Additionally each driver allows to put all three phases in a floating state.
+It is not possible to put the individual phases in floating state.
+This limits the driving methods for the motors.
+The IMU will be connected via the I2C interface and get regulated $3.3V$ supply voltage.
+Both microcontrollers will be powered over the regulated $5V$ from the power distribution board.
+The drivers have their own build in LDO regulators and will be supplied the battery voltage.
+Figure~\ref{fig:FloatSatSchematic} shows the detailed electrical Schematic.
+
 \begin{figure}[h]
     \centering
     \includegraphics[width=1\linewidth]{img/FloatSatSchematic.pdf}
@@ -183,10 +201,10 @@ All structural components are optimized for common FDM 3D-printing processes, av
 \paragraph{Functional}
 \begin{enumerate}
     \item The Battery shall to connect to the Power Distribution board.
-    \item The Power Distribution Board shall power the Main Control Unit.
-    \item The Power Distribution Board shall power the IMU.
-    \item The Power Distribution Board shall power the Communication Controller.
-    \item The Power Distribution Board shall power the Motor Driver Board.
+    \item The Power Distribution Board shall power the Main Control Unit ($5V$).
+    \item The Power Distribution Board shall power the IMU ($3.3V$).
+    \item The Power Distribution Board shall power the Communication Controller ($5V$).
+    \item The Power Distribution Board shall power the Motor Driver Board (Battery Voltage).
     \item The IMU shall communicate with the Main Control Unit.
     \item The Driver Board outputs shall control the Motor phases.
 \end{enumerate}
@@ -195,7 +213,7 @@ All structural components are optimized for common FDM 3D-printing processes, av
 \begin{enumerate}
     \item Duplex Communication between the Communication Controller and the Main Control Unit shall be provided.
     \item The Main Control Unit shall control 3 Outputs per Motor on the Driver Board.
-	\item The Main Control Unit shall be able to provide 3 different PWM signals to the driver.
+	\item The Main Control Unit shall be able to provide 3 different PWM signals to the drivers.
     \item The Main Control Unit shall be able to commute each motor phase independently.
 \end{enumerate}
 
@@ -206,7 +224,7 @@ All structural components are optimized for common FDM 3D-printing processes, av
 
 \paragraph{Environmental Requirements}
 \begin{enumerate}
-    \item The Connections shall withstand the Vibrations of the Flotation Environment
+    \item The Connections shall withstand the Vibrations of the Flotation Environment.
 \end{enumerate}
 
 %-----------------------------------------
