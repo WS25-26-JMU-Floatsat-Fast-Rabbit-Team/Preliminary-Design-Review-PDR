@@ -907,21 +907,21 @@ Requirements from WP2100.}\\
     \textbf{Processed by} & \multicolumn{3}{l|}{Tymoteusz Burak}\\
     \hline\hline
     \multicolumn{4}{|p{.95\columnwidth}|}{\textbf{Goals:}}\\
-    \multicolumn{4}{|p{.95\columnwidth}|}{$\bullet$ Gain knowledge about the literature research topic 1}\\
-    \multicolumn{4}{|p{.95\columnwidth}|}{$\bullet$ Gain a deep understanding of the current state of the art on research topic 1}\\
+    \multicolumn{4}{|p{.95\columnwidth}|}{$\bullet$ Define the overall software architecture for FloatSat}\\
+    \multicolumn{4}{|p{.95\columnwidth}|}{$\bullet$ Establish module boundaries for sensor handling, control loop execution, and communication}\\
     \multicolumn{4}{|p{.95\columnwidth}|}{}\\
     \multicolumn{4}{|p{.95\columnwidth}|}{\textbf{Input:}}\\
-    \multicolumn{4}{|p{.95\columnwidth}|}{$\bullet$ Journal papers on literature topic 1}\\
-    \multicolumn{4}{|p{.95\columnwidth}|}{$\bullet$ Conference papers on literature topic 1}\\
+    \multicolumn{4}{|p{.95\columnwidth}|}{$\bullet$ Electrical and mechanical interface definitions}\\
+    \multicolumn{4}{|p{.95\columnwidth}|}{$\bullet$ Control system requirements and reaction-wheel configuration}\\
     \multicolumn{4}{|p{.95\columnwidth}|}{}\\
     \multicolumn{4}{|p{.95\columnwidth}|}{\textbf{Connections to other WPs:}}\\
-    \multicolumn{4}{|p{.95\columnwidth}|}{}\\
+    \multicolumn{4}{|p{.95\columnwidth}|}{Provides architecture constraints for WP 4200 (Post-PDR refinement). Defines driver requirements for WP 4300 (Interface Drivers). Supplies structure for WP 4400 (Telemetry Integration) and WP 4500 (Control Algorithms).}\\
     \multicolumn{4}{|p{.95\columnwidth}|}{\textbf{Tasks:}}\\
-    \multicolumn{4}{|p{.95\columnwidth}|}{$\bullet$ Literature research literature topic 1}\\
+    \multicolumn{4}{|p{.95\columnwidth}|}{$\bullet$ Define software layers and module interfaces. Specify the timing structure (1–10 ms loop, interrupt handling). Document communication flows and data-handling architecture}\\
     \multicolumn{4}{|p{.95\columnwidth}|}{}\\
     \multicolumn{4}{|p{.95\columnwidth}|}{\textbf{Results:}}\\
-    \multicolumn{4}{|p{.95\columnwidth}|}{$\bullet$ Basic knowledge about literature topic 1}\\
-    \multicolumn{4}{|p{.95\columnwidth}|}{$\bullet$ Deeper knowledge about literature topic 1}\\
+    \multicolumn{4}{|p{.95\columnwidth}|}{$\bullet$ Clear interaction model between STM32 and ESP32 for later implementation}\\
+    \multicolumn{4}{|p{.95\columnwidth}|}{$\bullet$ Defined module structure for drivers, control loop, telemetry, and state machine}\\
     \hline
 \end{tabular}
 
@@ -1065,21 +1065,18 @@ Requirements from WP2100.}\\
     \textbf{Processed by} & \multicolumn{3}{l|}{Tymoteusz Burak, Abdirakhman Onabek}\\
     \hline\hline
     \multicolumn{4}{|p{.95\columnwidth}|}{\textbf{Goals:}}\\
-    \multicolumn{4}{|p{.95\columnwidth}|}{$\bullet$ Gain knowledge about the literature research topic 1}\\
-    \multicolumn{4}{|p{.95\columnwidth}|}{$\bullet$ Gain a deep understanding of the current state of the art on research topic 1}\\
+    \multicolumn{4}{|p{.95\columnwidth}|}{$\bullet$ Implement and tune the PID-based attitude control logic for the reaction-wheel system}\\
     \multicolumn{4}{|p{.95\columnwidth}|}{}\\
     \multicolumn{4}{|p{.95\columnwidth}|}{\textbf{Input:}}\\
-    \multicolumn{4}{|p{.95\columnwidth}|}{$\bullet$ Journal papers on literature topic 1}\\
-    \multicolumn{4}{|p{.95\columnwidth}|}{$\bullet$ Conference papers on literature topic 1}\\
+    \multicolumn{4}{|p{.95\columnwidth}|}{$\bullet$ Control requirements and actuator geometry from previous WPs.}\\
     \multicolumn{4}{|p{.95\columnwidth}|}{}\\
-    \multicolumn{4}{|p{.95\columnwidth}|}{\textbf{Connections to other WPs:}}\\
-    \multicolumn{4}{|p{.95\columnwidth}|}{}\\
+    \multicolumn{4}{|p{.95\columnwidth}|}{\textbf{Connections to other WPs:}} \\
+    \multicolumn{4}{|p{.95\columnwidth}|}{Provides the core control loop for WP 5500 (Final Control Validation).}\\
     \multicolumn{4}{|p{.95\columnwidth}|}{\textbf{Tasks:}}\\
-    \multicolumn{4}{|p{.95\columnwidth}|}{$\bullet$ Literature research literature topic 1}\\
+    \multicolumn{4}{|p{.95\columnwidth}|}{$\bullet$ Develop, test, and integrate the PID control loop into the STM32 software}\\
     \multicolumn{4}{|p{.95\columnwidth}|}{}\\
     \multicolumn{4}{|p{.95\columnwidth}|}{\textbf{Results:}}\\
-    \multicolumn{4}{|p{.95\columnwidth}|}{$\bullet$ Basic knowledge about literature topic 1}\\
-    \multicolumn{4}{|p{.95\columnwidth}|}{$\bullet$ Deeper knowledge about literature topic 1}\\
+    \multicolumn{4}{|p{.95\columnwidth}|}{$\bullet$ Working attitude-control algorithm integrated into the FloatSat software stack.}\\
     \hline
 \end{tabular}
 
