@@ -54,14 +54,7 @@
 \maketitle
 
 \begin{abstract}
-Following the title, the abstract is the \textbf{second} most frequently read part of a scientific report.
-It informs about the general content and determines the report's relevance for the reader.
-It is good practice to write the abstract when writing the report is \textbf{finished} in a way that it condenses and summarizes the content of the report.
-Only start writing the abstract when all required research and work have been finished.
-Make the abstract one paragraph without reference and use about \numrange{100}{300} words.
-Be sure to only draw conclusions and make only statements that are included in the report.
-Keep the text of the abstract in present tense.
-A good approach to drafting an abstract is to start by summarizing each section of the report in \numrange{1}{2} sentences.
+This report presents the Preliminary Design Review (PDR) for the FloatSat 2025/2026 project, which aims to develop a functional floatsat prototype capable of three-degree-of-freedom attitude control on a Spherical Air Bearing Unit. The project integrates mechanical, electrical, and control subsystems to simulate the torque-free dynamics of an orbital environment. The mechanical design features a modular, 3D-printable structure with a tilted orthogonal reaction wheel configuration, specifically optimized to align the center of gravity with the center of rotation and minimize parasitic torques. The electrical architecture utilizes a dual-microcontroller approach, employing an STM32F401 for real-time control loops and sensor interfacing, alongside an ESP32-C6 for wireless telemetry and ground station communication. Control system analysis confirms that the selected wheel geometry provides sufficient torque authority across all principal axes, utilizing a PID strategy for initial stabilization. This document defines the system requirements and technical specifications, establishing a validated foundation for the subsequent manufacturing and integration phases of the mission.
 \end{abstract}
 \end{@twocolumnfalse}
 ]
@@ -80,7 +73,7 @@ The FloatSat project, conducted under the Chair of Space Informatics and Satelli
 
 The project is inherently multidisciplinary, integrating mechanical engineering, embedded electronics, and control theory to develop a system capable of accurate reference trajectory tracking and stable attitude control. To ensure structured development and traceability, the project follows a Systems Engineering framework, organized into seven strategic Work Packages (WPs). These WPs encompass the full development lifecycle, from requirements analysis and state-of-the-art review to mechanical and electrical subsystem design, control strategy evaluation, and software system integration.
 
-The Preliminary Design Review (PDR) Report marks a pivotal milestone, offering an opportunity to evaluate the technical feasibility, system architecture, and readiness of the FloatSat prototype. This review establishes a validated foundation for subsequent optimization, integration, and performance testing, in which the system will be assessed against key metrics such as settling time, overshoot, and control effort.
+The Preliminary Design Review Report marks a pivotal milestone, offering an opportunity to evaluate the technical feasibility, system architecture, and readiness of the FloatSat prototype. This review establishes a validated foundation for subsequent optimization, integration, and performance testing, in which the system will be assessed against key metrics such as settling time, overshoot, and control effort.
 
 The following sections present a comprehensive overview of the FloatSat design at the PDR stage, detailing the project scope, design methodology, subsystem specifications, and the rationale behind the proposed system architecture.\\
 \begin{figure}[h]
